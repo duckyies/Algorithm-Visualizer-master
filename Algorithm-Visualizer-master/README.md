@@ -1,15 +1,44 @@
-# Algorithm-Visualizer
-This is just a basic algorithms visualizer consisting of and 4 graph algorithms. 
+# Pathfinding Algorithm Visualizer
 
-The css folder contains a bootstrap folder for all the Bootstrap classes and a style.css file
+A simple interactive tool to visualize how different pathfinding algorithms work in real-time.
 
-The js folder contains 2 seperate folders Graphs for all the graph code and Sorting for all the sort code and an app.js module acting as a controller between them and the view.
-In the Graphs folder, Algorithms.js contains all the graph algorithms that are called and controlled by Graph.js and same is the case with Sort.js and Algorithms.js
+## Features
 
-Iterator.js module contains all the code related to adding and removing the colorful iterator on the vertical bars during sorting process.
+- Visualize 4 popular pathfinding algorithms:
+  - A* (A-Star): Best for finding shortest path quickly
+  - Dijkstra's: Explores in all directions
+  - BFS (Breadth-First Search): Explores level by level
+  - DFS (Depth-First Search): Explores one path at a time
 
-Sound.js has the code for playing a sound of specified frequency for 20ms which is called in Algorithms.js for producing sound for every iteration.
+## How to Use
 
-The app does not require any building, just run it on a live server using your ide. In vs code specifically, install the Live Server extension, and then go to the index.html file, right-click and select Open with live server
+1. **Set Up the Grid**
+   - Click and drag to draw walls (black)
+   - Move start point (green) and end point (red)
 
-The app is hosted at - https://infinity052.github.io/Algorithm-Visualizer/
+2. **Run Algorithm**
+   - Select an algorithm from the dropdown
+   - Click "Start" to watch it work
+   - Use speed slider to adjust visualization speed
+
+3. **Controls**
+   - Clear Path: Removes the current path
+   - Clear Board: Resets everything
+   - Stop: Halts the current visualization
+
+## Colors Guide
+- White: Empty cell
+- Black: Wall
+- Blue: Start point
+- Red: End point
+- Green: Visited cells
+- Yellow: Final path
+
+## Technical Notes
+- Built with JavaScript
+- Uses async/await for smooth animations
+- Grid-based movement (no diagonals)
+
+
+## READ
+run it with https-server to avoid CORS error
