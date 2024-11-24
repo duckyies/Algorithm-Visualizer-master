@@ -1,0 +1,111 @@
+/* style.css */
+body {
+    margin: 0;
+    background-color: #1e1e2e;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+
+}
+.heading {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #c5c5c5;
+
+}
+.board{
+    display: grid;
+    background-color: #282839;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 80vw; /* Occupy more horizontal space */
+    height: 70vh; /* Occupy more vertical space */
+    margin: 20px auto; /* Center the grid */
+}
+.cell {
+    width: 25px;
+    height: 25px;
+    background-color: #f0f0f0; 
+    border: 1px solid #d0d0d0; 
+    transition: background-color 0.3s ease;
+}
+.cell.obstacle {
+    background-color: #39394e; 
+}
+.cell.visited {
+    background-color: #56b3c2; 
+}
+.cell.final {
+    background-color: #8DE969;
+}
+.cell.start {
+    background-color: #007bff;
+}
+.cell.end {
+     background-color: #dc3545; 
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+    justify-content: center; /* Center the controls horizontally */ 
+}
+
+.sliders {
+    display: flex;
+    align-items: center; /* Align slider and label vertically */
+    margin-bottom: 10px; /* Space between sliders */
+
+}
+.sliders label {
+    margin-right: 10px; /* Space between label and slider */
+    white-space: nowrap; /* Prevent label from wrapping */
+}
+.cell.glowing {
+    box-shadow: 0 0 10px 5px #8DE969; /* Green glow */
+    animation: glowing 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+
+}
+#algorithm-description {
+    margin-top: 10px; /* Add some space above description */
+    font-size: 0.9em;
+    text-align: center;
+}
+
+button {
+    background-color: #44445a;
+    border: none;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #5a5a75; 
+}
+
+
+.algorithm-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+select {
+    background-color: #44445a; 
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 1em; 
+}
